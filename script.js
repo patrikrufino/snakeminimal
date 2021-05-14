@@ -33,26 +33,28 @@ function iniciarJogo() {
     if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if (snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
     if (snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
-    if (snake[0].y) < 0 && direction == "up") snake[0].y = 16;
-criarBG();
-criarCobrinha();
+    if (snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
-let snakeX = snake[0].x;
-let snakeY = snake[0].y;
 
-if (direction == "right") snakeX += box;
-if (direction == "left") snakeX -= box;
-if (direction == "up") snakeY -= box;
-if (direction == "down") snakeY += box;
+    criarBG();
+    criarCobrinha();
 
-snake.pop();
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-let newHead = {
-    x: snakeX,
-    y: snakeY,
-}
+    if (direction == "right") snakeX += box;
+    if (direction == "left") snakeX -= box;
+    if (direction == "up") snakeY -= box;
+    if (direction == "down") snakeY += box;
 
-snake.unshift(newHead);
+    snake.pop();
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY,
+    }
+
+    snake.unshift(newHead);
 }
 
 let jogo = setInterval(iniciarJogo, 100);

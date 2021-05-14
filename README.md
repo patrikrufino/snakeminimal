@@ -7,7 +7,7 @@ Fique a vontade para brincar:
 
 https://snakeminimal.vercel.app/
 
-![Demonstração](./img/demonstração.png)
+![Demonstração](./img/Demonstração.png)
 
 ## Tecnologias utilizadas
 
